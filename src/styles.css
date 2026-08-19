@@ -309,6 +309,16 @@ button.primary:focus {
   left: -1px;
 }
 
+.toolbarLogos {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.toolbarLogos > img {
+  width: 20vw;
+}
+
 @media (min-width: 1200px) {
   #root {
     flex-direction: column;
@@ -323,5 +333,11 @@ button.primary:focus {
   .menu {
     bottom: 85px;
     flex-direction: column-reverse;
+  }
+  .toolbarLogos {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: fit-content;
   }
 }
