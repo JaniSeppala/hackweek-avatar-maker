@@ -3,10 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
+//const isProd = true;
 const publicPath = isProd ? "dist/" : "/";
 
 module.exports = {
   devtool: isProd ? "source-map" : "inline-source-map",
+  //mode: "production",
   mode: process.env.NODE_ENV || "development",
   module: {
     rules: [
@@ -27,6 +29,10 @@ module.exports = {
       {
         test: /\.ttf$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
